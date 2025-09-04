@@ -19,10 +19,10 @@ async def cmd_start(message: Message):
     if created:    
         await message.answer(f"Привет, {user_name}! Я бот для учета финансов." \
                               "Для помощи в моей работе используй команду: /help.",
-                             reply_markup=kb.main)
+                             reply_markup=kb.reply_kb)
     else:
         await message.answer(f"Привет, {user_name}! Мы уже знакомы!",
-                             reply_markup=kb.main)
+                             reply_markup=kb.reply_kb)
 
 
 @start_router.message(Command("help"))
